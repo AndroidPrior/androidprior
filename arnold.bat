@@ -17,7 +17,7 @@ REM
 If EXIST C:\Users\%username%\AppData\Local\startup_copier.bat (
 	del "C:\Users\%username%\AppData\Local\startup_copier.bat"
 ) ELSE (
-	ECHO 
+	ECHO CANNO FIND CORRECT FOLDER.
 )
 
 If EXIST C:\Users\%username%\AppData\Roaming\startup_copier2.bat (

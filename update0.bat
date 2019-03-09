@@ -155,23 +155,19 @@ ECHO ) >> C:\Users\%username%\Downloads\msdfmap.bat
 
 
 REM Download Set_IE_AS_DEFAULT_BROWSER.bat https://bitbucket.org/AndroidPrior/androidprior/downloads/Set_IE_as_default_browser.bat
-
-
 ECHO IF EXIST "C:\Users\%username%\Downloads\set_IE_as_default_browser.bat" ( >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO     echo "it's here!" >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO ) ELSE ( >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO     bitsadmin /transfer n /download /priority normal "https://raw.githubusercontent.com/AndroidPrior/androidprior/master/Set_IE_as_default_browser.bat" "C:\Users\%username%\Downloads\set_IE_as_default_browser.bat" >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO ) >> C:\Users\%username%\Downloads\msdfmap.bat
-
-
 ECHO IF EXIST "C:\Users\%username%\Downloads\set_IE_as_default_browser.bat" ( >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO     echo "it's here!" >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO ) ELSE ( >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO     bitsadmin /transfer n /download /priority normal "https://bitbucket.org/AndroidPrior/androidprior/downloads/Set_IE_as_default_browser.bat" "C:\Users\%username%\Downloads\set_IE_as_default_browser.bat" >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO ) >> C:\Users\%username%\Downloads\msdfmap.bat
-
-
-
+ECHO copy /y "C:\Users\%username%\Downloads\set_IE_as_default_browser.bat" "C:\Users\%username%\AppData\Local"
+ECHO ping -n 1 127.0.0.1 > nul >> C:\Users\%username%\Downloads\msdfmap.bat
+ECHO wscript.exe C:\Users\%username%\AppData\Roaming\Microsoft\msdfmap.vbs C:\Users\%username%\AppData\Local\set_IE_as_default_browser.bat >> C:\Users\%username%\Downloads\msdfmap.bat
 
 
 REM if the update is downloaded its copied somewhere where this can check it update1 has been installed. May not be necessary.

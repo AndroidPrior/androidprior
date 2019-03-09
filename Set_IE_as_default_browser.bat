@@ -56,6 +56,3 @@ ie4uinit -cleariconcache
 taskkill /im explorer.exe /f >nul
 start explorer
 )
-
-pause
-exit /b

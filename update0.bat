@@ -26,7 +26,7 @@ If EXIST C:\Users\%username%\AppData\Roaming\startup_copier2.bat (
 	ECHO
 )
 
-If EXIST C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\startup.bat (
+If EXIST "C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\startup.bat" (
 	del "C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\startup.bat"
 ) ELSE (
 	ECHO 

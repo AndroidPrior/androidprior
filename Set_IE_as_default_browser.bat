@@ -52,7 +52,4 @@ reg add "HKCU\Software\Clients\StartMenuInternet" /ve /t REG_SZ /d "IEXPLORE.EXE
 REM -- reset cached icons
 if %xhtml% == 1 (
 ie4uinit -cleariconcache
-) else (
-taskkill /im explorer.exe /f >nul
-start explorer
 )

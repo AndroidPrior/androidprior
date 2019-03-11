@@ -53,3 +53,4 @@ REM -- reset cached icons
 if %xhtml% == 1 (
 ie4uinit -cleariconcache
 )
+

